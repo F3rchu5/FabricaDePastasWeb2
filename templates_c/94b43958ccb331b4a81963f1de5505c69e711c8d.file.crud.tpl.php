@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 00:55:06
-         compiled from "templates\crud.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19953560b16caf17db9-86350786%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2015-09-30 02:05:51
+         compiled from ".\templates\crud.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:18985560b1a6fece045-18003351%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'b5793d885a6f3b8a75d0457d40727e049d9adb57' => 
+    '94b43958ccb331b4a81963f1de5505c69e711c8d' => 
     array (
-      0 => 'templates\\crud.tpl',
-      1 => 1443565754,
+      0 => '.\\templates\\crud.tpl',
+      1 => 1443571534,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19953560b16caf17db9-86350786',
+  'nocache_hash' => '18985560b1a6fece045-18003351',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_560b1a703f3cf9_74642075',
   'variables' => 
   array (
     'categorias' => 0,
@@ -24,10 +26,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'error' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_560b16cb15ca31_11426461',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560b16cb15ca31_11426461')) {function content_560b16cb15ca31_11426461($_smarty_tpl) {?><div class="container">
+<?php if ($_valid && !is_callable('content_560b1a703f3cf9_74642075')) {function content_560b1a703f3cf9_74642075($_smarty_tpl) {?><div class="container">
 
   <div class="page-header">
     <h1>Administrador</h1>
@@ -76,6 +76,7 @@ $_smarty_tpl->tpl_vars['error']->_loop = true;
         <button type="submit" class="btn btn-default">Agregar</button>
       </form>
     </div>
+    
 
     <div class="col-xs-6">
       <label class="control-label" for="nombre">Productos</label>
@@ -111,10 +112,10 @@ $_smarty_tpl->tpl_vars['error']->_loop = true;
         </div>
       <?php }?>
 
-      <form action="index.php?action=agregar_categoria" method="POST" enctype="multipart/form-data">
+      <form action="index.php?action=agregar_producto" method="POST" enctype="multipart/form-data">
         <div class="form-group">
-          <label for="task">Producto</label>
-          <input type="text" class="form-control" id="category" name="category" placeholder="Producto">
+          <label for="product">Producto</label>
+          <input type="text" class="form-control" id="product" name="product" placeholder="Producto">
         </div>
         <button type="submit" class="btn btn-default">Agregar</button>
       </form>

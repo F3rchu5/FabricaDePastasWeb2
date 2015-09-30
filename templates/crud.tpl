@@ -28,14 +28,15 @@
         </div>
       {/if}
 
-      <form action="index.php?action=agregar_categoria" method="POST" enctype="multipart/form-data">
+      <form action="index.php?action=crud_agregar_categoria" method="POST" enctype="multipart/form-data">
         <div class="form-group">
-          <label for="task">Categoría</label>
+          <label for="category">Categoría</label>
           <input type="text" class="form-control" id="category" name="category" placeholder="Categoría">
         </div>
         <button type="submit" class="btn btn-default">Agregar</button>
       </form>
     </div>
+    
 
     <div class="col-xs-6">
       <label class="control-label" for="nombre">Productos</label>
@@ -60,10 +61,10 @@
         </div>
       {/if}
 
-      <form action="index.php?action=agregar_categoria" method="POST" enctype="multipart/form-data">
+      <form action="index.php?action=agregar_producto" method="POST" enctype="multipart/form-data">
         <div class="form-group">
-          <label for="task">Producto</label>
-          <input type="text" class="form-control" id="category" name="category" placeholder="Producto">
+          <label for="product">Producto</label>
+          <input type="text" class="form-control" id="product" name="product" placeholder="Producto">
         </div>
         <button type="submit" class="btn btn-default">Agregar</button>
       </form>
