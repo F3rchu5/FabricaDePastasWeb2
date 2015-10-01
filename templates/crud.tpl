@@ -42,7 +42,7 @@
           <label for="imagesToUpload">Imagenes</label>
           <input type="file" name="imagesToUpload[]" id="imagesToUpload" multiple/>
         </div>
-        <button type="submit" class="btn btn-default">Agregar</button>
+        <button type="submit" class="btn btn-default">Agregar Categoría</button>
       </form>
     </div>
 
@@ -89,7 +89,7 @@
             {/foreach}
           </select>
         </div>
-        <button type="submit" class="btn btn-default" id="agregarProducto">Agregar</button>
+        <button type="submit" class="btn btn-default" id="agregarProducto">Agregar Producto</button>
       </form>
     </div>
 

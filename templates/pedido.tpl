@@ -14,57 +14,14 @@
                   </thead>
                   <tbody id="contenidoTabla"><!--Contenido de la tabla-->
                     <tr>
-                      <td>Capeletis</td>
-                      <td>$15 x caja</td>
-                    </tr>
-                    <tr>
-                      <td>Ravioles</td>
-                      <td>$25 x caja</td>
-                    </tr>
-                    <tr>
-                      <td>Sorrentinos</td>
-                      <td>$90 x Kg</td>
-                    </tr>
-                    <tr>
-                      <td>Tallarines</td>
-                      <td>$30 x Kg</td>
-                    </tr>
-                    <tr>
-                      <td>Ñoquis</td>
-                      <td>$25 x Kg</td>
-                    </tr>
-                    <tr>
-                      <td>Canelones</td>
-                      <td>$12 c/u</td>
-                    </tr>
-                    <tr>
-                      <td>Tarteletis</td>
-                      <td>$70 x Kg</td>
+                      {foreach $productos as $producto}
+                        <td>{$producto['nombre']}</td>
+                        <td>{$producto['precio']}</td>
+                      {/foreach}
                     </tr>
                   </tbody>
-                  <tfoot>
-                    <tr>
-                    <td>
-                      <form>
-                        <div class="form-group">
-                          <label>Producto</label>
-                          <input type="text" class="form-control" id="producto">
-                        </div>
-                      </form>
-                    </td>
-                    <td>
-                      <form>
-                        <div class="form-group">
-                          <label>Precio Por Unidad</label>
-                          <input type="text" class="form-control" id="precio">
-                        </div>
-                      </form>
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
+                </table>
              </div>
-             <button type="submit" class="btn btn-default" id="agregarProducto">Agregar</button>
            </div>
             <div class="col-xs-6 ">
               <form>

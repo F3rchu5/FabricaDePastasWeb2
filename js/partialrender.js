@@ -35,4 +35,9 @@ $(document).ready(function(){
 		$("#aMostrar").toggle();
 	});
 
+	$('body').on('click',"#contenidotabla", function(event){
+			event.preventDefault();
+			$("#contenidotabla").append("<tr><td>" + producto + "</td><td>" + precio + "</td></tr>");
+	});
+
 });

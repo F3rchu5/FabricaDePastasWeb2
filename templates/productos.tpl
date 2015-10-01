@@ -10,7 +10,15 @@
            <p>Para garantizar la frescura de nuestra producción, realizamos elaboración a la vista.</p>
            <p>No deje de solicitar nuestros productos y comprobar la calidad de los mismos.</p>
            <ul>
-             <li>Capeletis</li>
+             {foreach $categorias as $categoria}
+               <li>{$categoria['nombre']}</li>
+                <ul>
+                  {foreach $productos as $producto}
+                    <li>{$producto['nombre']}</li>
+                  {/foreach}
+                </ul>
+             {/foreach}
+             <!--<li>Capeletis</li>
                <ul>
                  <li>Jamón y queso</li>
                  <li>Ricota y jamón</li>
@@ -46,7 +54,7 @@
                  <li>Al huevo</li>
                  <li>Espinaca</li>
                  <li>Morrón</li>
-               </ul>
+               </ul>-->
            </ul>
          </div>
         </div>
