@@ -7,13 +7,19 @@
   <div class="row">
     <div class="col-xs-6">
       <label class="control-label" for="nombre">Categoría</label>
-      <ul class="list-group">
-        {foreach $categorias as $categoria}
-          <li class="list-group-item">
-            {$categoria['nombre']}
-            <!--<a class="glyphicon glyphicon-trash" href="index.php?action=borrar_tarea&id_task={$tarea['id']}"></a>
-      -->  {/foreach}
-      </ul>
+      <div >
+        <ul id="aMostrar"class="list-group">
+          {foreach $categorias as $categoria}
+            <li class="list-group-item">
+              {$categoria['nombre']}
+                <a class="glyphicon glyphicon-trash" href="index.php?action=crud_borrar_categoria&id_categoria={$categoria['id_categoria']}"></a>
+
+                <img src="{$categoria['img']}" alt="imagen-categoria-{$categoria['id_categoria']}" class="img-responsive"  />
+
+          {/foreach}
+        </ul>
+      </div>
+      <button id="mostrar" class="btn btn-default">Mostrar Categorías</button>
 
       {if count($errores) gt 0}
         <div class="panel panel-danger">
@@ -33,10 +39,14 @@
           <label for="category">Categoría</label>
           <input type="text" class="form-control" id="category" name="category" placeholder="Categoría">
         </div>
+        <div class="form-group">
+          <label for="imagesToUpload">Imagenes</label>
+          <input type="file" name="imagesToUpload[]" id="imagesToUpload" multiple/>
+        </div>
         <button type="submit" class="btn btn-default">Agregar</button>
       </form>
     </div>
-    
+
 
     <div class="col-xs-6">
       <label class="control-label" for="nombre">Productos</label>

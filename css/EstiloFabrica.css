@@ -198,6 +198,8 @@ footer {
 }
 .contenedor{
   margin-top: 20px;
+}
 
-
+#aMostrar{
+  display: none;
 }

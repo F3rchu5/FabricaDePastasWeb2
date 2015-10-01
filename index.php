@@ -43,6 +43,10 @@
         $indexController = new IndexController();
         $indexController->agregarCategoria();
         break;
+      case ConfigApp::$ACTION_CRUD_BORRAR_CATEGORIA:
+        $indexController = new IndexController();
+        $indexController->borrarCategoria();
+        break;
       default:
         echo 'Pagina no encontrada';
         break;

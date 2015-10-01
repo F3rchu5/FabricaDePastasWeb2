@@ -30,4 +30,9 @@ $(document).ready(function(){
 	$(".simplenav a").on("click",CargarAjax);
 	$(".contacto").on("click",CargarAjax);
 
+	$('body').on('click', '#mostrar', function(event){
+		event.preventDefault();
+		$("#aMostrar").toggle();
+	});
+
 });
