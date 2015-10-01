@@ -7,19 +7,17 @@
   <div class="row">
     <div class="col-xs-6">
       <label class="control-label" for="nombre">Categoría</label>
-      <div >
+      <div>
         <ul id="aMostrar"class="list-group">
           {foreach $categorias as $categoria}
             <li class="list-group-item">
               {$categoria['nombre']}
                 <a class="glyphicon glyphicon-trash" href="index.php?action=crud_borrar_categoria&id_categoria={$categoria['id_categoria']}"></a>
-
                 <img src="{$categoria['img']}" alt="imagen-categoria-{$categoria['id_categoria']}" class="img-responsive"  />
-
           {/foreach}
         </ul>
       </div>
-      <button id="mostrar" class="btn btn-default">Mostrar Categorías</button>
+      <button id="mostrar" class="btn btn-default">Mostrar/Ocultar Categorías</button>
 
       {if count($errores) gt 0}
         <div class="panel panel-danger">

@@ -13,13 +13,9 @@
                 <div class="col-xs-6 contenedor">
                   <p>Dentro de nuestro local, pueden encontrar:</p>
                     <ul class="productos">
-                      <li>Capeletis</li>
-                      <li>Sorrentinos</li>
-                      <li>Ravioles</li>
-                      <li>Canelones</li>
-                      <li>Ñoquis</li>
-                      <li>Tallarines</li>
-                      <li>Tarteletis</li>
+                      {foreach $categorias as $categoria}
+                        <li>{$categoria['nombre']}</li>
+                      {/foreach}
                     </ul>
                 </div>
                 <div class="col-xs-6">

@@ -21,13 +21,8 @@
 
     function RetornarContenido($contenido)
     {
-      $ruta = "templates/". $contenido.".tpl";
-      return $this->view->mostrarTPL($ruta);
-    }
-
-    public function mostrarCrud()
-    {
-      $this->view->mostrar($this->model->getCategoria());
+      $ruta = "templates/" . $contenido . ".tpl";
+      return $this->view->mostrarTPL($ruta,$this->model->getCategoria());
     }
 
     public function agregarCategoria()

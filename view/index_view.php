@@ -16,9 +16,10 @@
         $this->smarty->display('index.tpl');
       }
 
-      public function mostrarTPL($contenido)
+      public function mostrarTPL($contenido,$categoria)
       {
         $this->smarty->assign('errores', $this->errores);
+        $this->smarty->assign('categorias', $categoria);
         return $this->smarty->fetch($contenido);
       }
 
@@ -26,11 +27,11 @@
         array_push($this->errores, $error);
       }
 
-      function mostrar($categoria){
+      /*function mostrar($categoria){
         $this->smarty->assign('errores', $this->errores);
         $this->smarty->assign('categorias', $categoria);
         $this->smarty->display('crud.tpl');
-      }
+      }*/
 
   }
 ?>

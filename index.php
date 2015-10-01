@@ -31,14 +31,14 @@
         $indexController = new IndexController();
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
-      /*case ConfigApp::$ACTION_CRUD:
-        $indexController = new IndexController();
-        echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
-        break;*/
       case ConfigApp::$ACTION_CRUD:
         $indexController = new IndexController();
-        $indexController->mostrarCrud();
+        echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
+      /*case ConfigApp::$ACTION_CRUD:
+        $indexController = new IndexController();
+        $indexController->mostrarCrud();
+        break;*/
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
         $indexController = new IndexController();
         $indexController->agregarCategoria();
