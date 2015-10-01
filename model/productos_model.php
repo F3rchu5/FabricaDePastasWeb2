@@ -1,46 +1,51 @@
 <?php
 
-  class categoriaModel
+  class productoModel
   {
 
-    private $categoria;
+    private $producto;
     private $db;
 
-    public function __construct()
-    {
-      $this->db = new PDO('mysql:host=localhost;dbname=fabrica;charset=utf8', 'root', '');
-      $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    public function __construct(){
+        $this->db = new PDO('mysql:host=localhost;dbname=fabrica;charset=utf8', 'root', '');
+        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    function getCategoria(){
-      $categorias = array();
-      $consulta = $this->db->prepare("SELECT * FROM categoria");
+    public function getProductos(){
+      $productos = array();
+      $consulta = $this->db->prepare("SELECT * FROM producto");
       $consulta->execute();
       $id=0;
-      while ($categoria = $consulta->fetch()){
-        $categorias[$id]['id_categoria'] = $categoria['id_categoria'];
-        $categorias[$id]['nombre'] = $categoria['nombre'];
-        $categorias[$id]['img'] = $categoria['img'];
+      while ($producto = $consulta->fetch()){
+        $productos[$id]['id_producto'] = $producto['id_producto'];
+        $productos[$id]['nombre'] = $producto['nombre'];
+        $productos[$id]['precio'] = $producto['precio'];
+        $productos[$id]['id_categoria'] = $producto['id_categoria'];
         $id++;
       }
-      return $categorias;
+      return $productos;
     }
 
-    private function subirArchivos($archivos){
-      $destino = 'images/' . uniqid() . $archivos['name'][0];
-      move_uploaded_file($archivos['tmp_name'][0], $destino);
-      return $destino;
+    private function buscarId($nombreCat)
+    {
+      $consulta = $this->db->prepare("SELECT * FROM categoria");
+      $consulta->execute();
+      while ($categoria = $consulta->fetch()){
+        if ($categoria['nombre'] = $nombreCat) {
+          return $categoria['id'];
+        }
+      }
     }
 
-    function agregarCategoria($categoria, $files){
-      $ruta = $this->subirArchivos($files);
-      $consulta = $this->db->prepare('INSERT INTO categoria(nombre,img) VALUES(?,?)');
-      $consulta->execute(array($categoria,$ruta));
+    public function agregarProducto($producto,$precio,$categoria){
+      $id_cat = $this->buscarId($categoria);
+      $consulta = $this->db->prepare('INSERT INTO fabrica.producto(nombre, precio, id_categoria) VALUES (?,?,?)');
+      $consulta->execute(array($producto,$precio,$id_cat));
     }
 
-    function borrarCategoria($id_categoria){
-      $consulta = $this->db->prepare('DELETE FROM categoria WHERE id_categoria=?');
-      $consulta->execute(array($id_categoria));
+    public function borrarProducto($id_producto){
+      $consulta = $this->db->prepare('DELETE FROM producto WHERE id_producto=?');
+      $consulta->execute(array($id_producto));
     }
 
   }

@@ -35,10 +35,6 @@
         $indexController = new IndexController();
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
-      /*case ConfigApp::$ACTION_CRUD:
-        $indexController = new IndexController();
-        $indexController->mostrarCrud();
-        break;*/
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
         $indexController = new IndexController();
         $indexController->agregarCategoria();
@@ -46,6 +42,14 @@
       case ConfigApp::$ACTION_CRUD_BORRAR_CATEGORIA:
         $indexController = new IndexController();
         $indexController->borrarCategoria();
+        break;
+      case ConfigApp::$ACTION_CRUD_AGREGAR_PRODUCTO:
+        $indexController = new IndexController();
+        $indexController->agregarProducto();
+        break;
+      case ConfigApp::$ACTION_CRUD_BORRAR_PRODUCTO:
+        $indexController = new IndexController();
+        $indexController->borrarProducto();
         break;
       default:
         echo 'Pagina no encontrada';

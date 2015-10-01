@@ -12,6 +12,8 @@
     public static $ACTION_CRUD = 'crud';
     public static $ACTION_CRUD_AGREGAR_CATEGORIA = 'crud_agregar_categoria';
     public static $ACTION_CRUD_BORRAR_CATEGORIA = 'crud_borrar_categoria';
+    public static $ACTION_CRUD_AGREGAR_PRODUCTO = 'crud_agregar_producto';
+    public static $ACTION_CRUD_BORRAR_PRODUCTO = 'crud_borrar_producto';
   }
 
 ?>

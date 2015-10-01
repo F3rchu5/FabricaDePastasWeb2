@@ -4,6 +4,7 @@
     <h1>Administrador</h1>
   </div>
 
+  <!--      Categorías     -->
   <div class="row">
     <div class="col-xs-6">
       <label class="control-label" for="nombre">Categoría</label>
@@ -45,15 +46,15 @@
       </form>
     </div>
 
-
+    <!--      Productos     -->
     <div class="col-xs-6">
       <label class="control-label" for="nombre">Productos</label>
       <ul class="list-group">
-        {foreach $categorias as $categoria}
+        {foreach $productos as $producto}
           <li class="list-group-item">
-            {$categoria['nombre']}
-            <!--<a class="glyphicon glyphicon-trash" href="index.php?action=borrar_tarea&id_task={$tarea['id']}"></a>
-      -->  {/foreach}
+            {$producto['nombre']}
+            <a class="glyphicon glyphicon-trash" href="index.php?action=crud_borrar_producto&id_producto={$producto['id_producto']}"></a>
+        {/foreach}
       </ul>
 
       {if count($errores) gt 0}
@@ -69,14 +70,29 @@
         </div>
       {/if}
 
-      <form action="index.php?action=agregar_producto" method="POST" enctype="multipart/form-data">
+      <form action="index.php?action=crud_agregar_producto" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label for="product">Producto</label>
           <input type="text" class="form-control" id="product" name="product" placeholder="Producto">
         </div>
-        <button type="submit" class="btn btn-default">Agregar</button>
+        <div class="form-group">
+          <label for="price">Precio</label>
+          <input type="text" class="form-control" id="price" placeholder="Precio">
+        </div>
+        <div class="form-group">
+          <div>
+            <label for="category">Categoria</label>
+          </div>
+          <select class="form-control" id="category">
+            {foreach $categorias as $categoria}
+              <option>{$categoria['nombre']}</option>
+            {/foreach}
+          </select>
+        </div>
+        <button type="submit" class="btn btn-default" id="agregarProducto">Agregar</button>
       </form>
     </div>
+
   </div>
 
 </div>
