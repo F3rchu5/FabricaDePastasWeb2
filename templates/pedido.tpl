@@ -13,12 +13,12 @@
                     </tr>
                   </thead>
                   <tbody id="contenidoTabla"><!--Contenido de la tabla-->
-                    <tr>
-                      {foreach $productos as $producto}
+                    {foreach $productos as $producto}
+                      <tr>
                         <td>{$producto['nombre']}</td>
                         <td>{$producto['precio']}</td>
-                      {/foreach}
-                    </tr>
+                      </tr>
+                    {/foreach}
                   </tbody>
                 </table>
              </div>
