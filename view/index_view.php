@@ -1,7 +1,7 @@
 <?php
   include_once 'libs/Smarty.class.php';
 
-  class categoriaView {
+  class indexView {
       private $smarty;
       private $errores;
 
@@ -16,10 +16,11 @@
         $this->smarty->display('index.tpl');
       }
 
-      public function mostrarTPL($contenido,$categoria)
+      public function mostrarTPL($contenido,$categoria,$producto)
       {
         $this->smarty->assign('errores', $this->errores);
         $this->smarty->assign('categorias', $categoria);
+        $this->smarty->assign('productos', $producto);
         return $this->smarty->fetch($contenido);
       }
 

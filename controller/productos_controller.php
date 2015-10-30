@@ -1,5 +1,5 @@
 <?php
-  include_once 'view/productos_view.php';
+  include_once 'view/index_view.php';
   include_once 'model/productos_model.php';
 
   class productoController

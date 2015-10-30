@@ -1,5 +1,5 @@
 <?php
-  include_once 'view/categorias_view.php';
+  include_once 'view/index_view.php';
   include_once 'model/categorias_model.php';
 
   class categoriaController
