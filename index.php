@@ -1,7 +1,8 @@
 <?php
 
   include_once 'config/config_app.php';
-  include_once 'controller/index_controller.php';
+  include_once 'controller/categorias_controller.php';
+  include_once 'controller/productos_controller.php';
 
   if(!array_key_exists(ConfigApp::$ACTION, $_REQUEST) || $_REQUEST[ConfigApp::$ACTION] == ConfigApp::$ACTION_DEFAULT)
   {
