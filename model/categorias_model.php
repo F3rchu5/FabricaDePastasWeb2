@@ -27,7 +27,7 @@
     }
 
     private function subirArchivos($archivos){
-      $destino = 'images/' . uniqid() . $archivos['name'][0];
+      $destino = 'images/uploaded/' . uniqid() . $archivos['name'][0];
       move_uploaded_file($archivos['tmp_name'][0], $destino);
       return $destino;
     }
