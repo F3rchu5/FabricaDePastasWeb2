@@ -1,7 +1,7 @@
     <div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">Acceder para continuar</h2>
+        <h3 class="form-signin-heading">Acceder para continuar</h3>
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Contraseña</label>
