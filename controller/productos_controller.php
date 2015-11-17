@@ -2,21 +2,13 @@
   include_once 'view/index_view.php';
   include_once 'model/productos_model.php';
 
-  class productoController
+  class productoController extends Controller
   {
-
-    private $view;
-    private $model;
 
     function __construct()
     {
       $this->view = new productoView();
       $this->model = new productoModel();
-    }
-
-    public function MostrasIndex()
-    {
-      $this->view->mostrarIndex();
     }
 
     function RetornarContenido($contenido)

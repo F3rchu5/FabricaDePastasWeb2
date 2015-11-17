@@ -2,21 +2,13 @@
   include_once 'view/index_view.php';
   include_once 'model/categorias_model.php';
 
-  class categoriaController
+  class categoriaController extends Controller
   {
-
-    private $view;
-    private $model;
 
     function __construct()
     {
       $this->view = new categoriaView();
       $this->model = new categoriaModel();
-    }
-
-    public function MostrasIndex()
-    {
-      $this->view->mostrarIndex();
     }
 
     function RetornarContenido($contenido)
