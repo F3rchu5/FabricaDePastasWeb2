@@ -1,16 +1,11 @@
 <?php
 
-  class categoriaModel
+  include_once "model/model.php";
+
+  class categoriaModel extends Model
   {
 
     private $categoria;
-    private $db;
-
-    public function __construct()
-    {
-      $this->db = new PDO('mysql:host=localhost;dbname=fabrica;charset=utf8', 'root', '');
-      $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
 
     function getCategoria(){
       $categorias = array();
@@ -32,13 +27,13 @@
       return $destino;
     }
 
-    function agregarCategoria($categoria, $files){
+    public function agregarCategoria($categoria, $files){
       $ruta = $this->subirArchivos($files);
       $consulta = $this->db->prepare('INSERT INTO categoria(nombre,img) VALUES(?,?)');
       $consulta->execute(array($categoria,$ruta));
     }
 
-    function borrarCategoria($id_categoria){
+    public function borrarCategoria($id_categoria){
       $consulta = $this->db->prepare('DELETE FROM categoria WHERE id_categoria=?');
       $consulta->execute(array($id_categoria));
     }
