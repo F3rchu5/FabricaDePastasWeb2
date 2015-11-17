@@ -5,7 +5,7 @@
     <!-- Cuerpo del index -->
     <div class="container">
         <div id="contenido">
-          {include 'inicio.tpl'}
+          {include 'loging.tpl'}
         </div>
     </div>
     <!-- Fin del cuerpo del index -->

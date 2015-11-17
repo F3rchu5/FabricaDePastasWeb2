@@ -5,6 +5,7 @@
   include_once 'controller/productos_controller.php';
   include_once 'controller/controller.php';
   include_once 'controller/indexController.php';
+  include_once 'controller/loging_Controller.php';
 
   if(!array_key_exists(ConfigApp::$ACTION, $_REQUEST) || $_REQUEST[ConfigApp::$ACTION] == ConfigApp::$ACTION_DEFAULT)
   {
