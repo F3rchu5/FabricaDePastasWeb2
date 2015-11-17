@@ -8,15 +8,15 @@
 
   if(!array_key_exists(ConfigApp::$ACTION, $_REQUEST) || $_REQUEST[ConfigApp::$ACTION] == ConfigApp::$ACTION_DEFAULT)
   {
-    $indexController = new IndexController();
-    $indexController->MostrasIndex();
+    $controlador = new IndexController();
+    $controlador->MostrasIndex();
   }
   else {
 
     switch ($_REQUEST[ConfigApp::$ACTION])  {
       case ConfigApp::$ACTION_INICIO:
-        $indexController = new IndexController();
-        echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
+        $controlador = new IndexController();
+        echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_QUE_OFRECEMOS:
         $indexController = new IndexController();
