@@ -6,7 +6,7 @@
 
   if(!array_key_exists(ConfigApp::$ACTION, $_REQUEST) || $_REQUEST[ConfigApp::$ACTION] == ConfigApp::$ACTION_DEFAULT)
   {
-    $indexController = new IndexController();
+    $indexController = new Controller();
     $indexController->MostrasIndex();
   }
   else {

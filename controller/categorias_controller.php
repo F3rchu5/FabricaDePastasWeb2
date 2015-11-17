@@ -1,6 +1,7 @@
 <?php
-  include_once 'view/index_view.php';
+
   include_once 'model/categorias_model.php';
+  include_once 'controller/controller.php';
 
   class categoriaController extends Controller
   {

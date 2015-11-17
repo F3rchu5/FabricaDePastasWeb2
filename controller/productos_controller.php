@@ -1,6 +1,6 @@
 <?php
-  include_once 'view/index_view.php';
   include_once 'model/productos_model.php';
+  include_once 'controller/controller.php';
 
   class productoController extends Controller
   {
