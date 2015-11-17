@@ -14,6 +14,8 @@
     public static $ACTION_CRUD_BORRAR_CATEGORIA = 'crud_borrar_categoria';
     public static $ACTION_CRUD_AGREGAR_PRODUCTO = 'crud_agregar_producto';
     public static $ACTION_CRUD_BORRAR_PRODUCTO = 'crud_borrar_producto';
+    public static $ACTION_LOGIN = 'login';
+    public static $ACTION_LOGOUT = 'logout';
   }
 
 ?>
