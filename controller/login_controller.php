@@ -3,12 +3,14 @@
   //include_once 'view/login_view.php';
   include_once 'model/usuarios_model.php';
 
-  class LogingController extends Controller
+  class LoginController extends Controller
   {
 
     function __construct() {
       $this->model = new UsuariosModel();
       $this->view = new LoginView();
+      $this->checkSesion();
+
     }
 
     function logout(){
@@ -39,7 +41,7 @@
         }
       }
 
-      $this->view->mostrar();
+      $this->mostrarIndex();
     }
 
     public function MostrasIndex()

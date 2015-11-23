@@ -1,7 +1,7 @@
     <div class="container">
 
       <form class="form-signin" method="POST" action="index.php?action=login">
-        <h2 class="form-signin-heading">Acceso</h2>
+        <h3 class="form-signin-heading">Acceder para continuar</h3>
         <label for="txtEmail" class="sr-only">Email</label>
         <input type="email" id="txtEmail" name="txtEmail" class="form-control" placeholder="Email" required autofocus>
         <label for="txtPassword" class="sr-only">Password</label>
