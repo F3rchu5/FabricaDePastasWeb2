@@ -4,6 +4,7 @@ include_once 'view/View.php';
 class LoginView extends View{
 
   function mostrarIndex(){
+    $this->smarty->assign('email', $_SESSION["email"]);
     $this->smarty->assign('errores', $this->errores);
     $this->smarty->display('login.tpl');
   }

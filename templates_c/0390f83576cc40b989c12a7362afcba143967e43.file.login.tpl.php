@@ -1,33 +1,33 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 19:21:16
-         compiled from ".\templates\loging.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1848656533e0d386b95-68239240%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 21:57:10
+         compiled from ".\templates\login.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1784356537da64b7280-53360812%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '8bb487c05d78cb389984a6e7057472f659624a12' => 
+    '0390f83576cc40b989c12a7362afcba143967e43' => 
     array (
-      0 => '.\\templates\\loging.tpl',
-      1 => 1448302808,
+      0 => '.\\templates\\login.tpl',
+      1 => 1448307782,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1848656533e0d386b95-68239240',
+  'nocache_hash' => '1784356537da64b7280-53360812',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_56533e0d3ddbc1_42540601',
   'variables' => 
   array (
     'errores' => 0,
     'error' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_56537da64dff04_86121800',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56533e0d3ddbc1_42540601')) {function content_56533e0d3ddbc1_42540601($_smarty_tpl) {?>    <div class="container">
+<?php if ($_valid && !is_callable('content_56537da64dff04_86121800')) {function content_56537da64dff04_86121800($_smarty_tpl) {?>    <div class="container">
 
       <form class="form-signin" method="POST" action="index.php?action=login">
-        <h2 class="form-signin-heading">Acceso</h2>
+        <h3 class="form-signin-heading">Acceder para continuar</h3>
         <label for="txtEmail" class="sr-only">Email</label>
         <input type="email" id="txtEmail" name="txtEmail" class="form-control" placeholder="Email" required autofocus>
         <label for="txtPassword" class="sr-only">Password</label>
