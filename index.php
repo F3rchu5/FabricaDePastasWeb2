@@ -20,8 +20,8 @@
         echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_QUE_OFRECEMOS:
-        $indexController = new IndexController();
-        echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
+        $categoriaController = new categoriaController();
+        echo $categoriaController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_PRODUCTOS:
         $indexController = new IndexController();

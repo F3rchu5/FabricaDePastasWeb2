@@ -1,41 +1,25 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:14:59
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:59:09
          compiled from ".\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3276056538fe3d67ed4-21281960%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:48:00
-         compiled from ".\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3050856538134c2b675-05999255%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
+<?php /*%%SmartyHeaderCode:826056539a3dd38ed4-80066414%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1be7ff7fdee636597edd726ee98dfef4bfd55d1f' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1448318877,
+      1 => 1448319362,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '3276056538fe3d67ed4-21281960',
-=======
-  'nocache_hash' => '3050856538134c2b675-05999255',
->>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
+  'nocache_hash' => '826056539a3dd38ed4-80066414',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-<<<<<<< HEAD
-  'unifunc' => 'content_56538fe3d6d059_23721975',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56538fe3d6d059_23721975')) {function content_56538fe3d6d059_23721975($_smarty_tpl) {?>    <!-- Footer -->
-=======
-  'unifunc' => 'content_56538134c69f06_27610581',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_56539a3dd3e238_57518705',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56538134c69f06_27610581')) {function content_56538134c69f06_27610581($_smarty_tpl) {?>    <!-- Footer -->
->>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
+<?php if ($_valid && !is_callable('content_56539a3dd3e238_57518705')) {function content_56539a3dd3e238_57518705($_smarty_tpl) {?>    <!-- Footer -->
     <footer id="footer">
       <div class="container">
         <div class="social text-center">

@@ -1,41 +1,25 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:14:59
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:59:09
          compiled from ".\templates\nav.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2724256538fe3ce3f09-64082553%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:48:00
-         compiled from ".\templates\nav.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1471856538134a79276-26980099%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
+<?php /*%%SmartyHeaderCode:175056539a3dcfec55-03237502%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '78dfd564017866b2a07d32220e5f711a454b3ecb' => 
     array (
       0 => '.\\templates\\nav.tpl',
-      1 => 1448318877,
+      1 => 1448319362,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '2724256538fe3ce3f09-64082553',
-=======
-  'nocache_hash' => '1471856538134a79276-26980099',
->>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
+  'nocache_hash' => '175056539a3dcfec55-03237502',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-<<<<<<< HEAD
-  'unifunc' => 'content_56538fe3ce8656_96515247',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56538fe3ce8656_96515247')) {function content_56538fe3ce8656_96515247($_smarty_tpl) {?><!-- Nav -->
-=======
-  'unifunc' => 'content_56538134aac5f3_22867012',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_56539a3dd06f28_15781847',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56538134aac5f3_22867012')) {function content_56538134aac5f3_22867012($_smarty_tpl) {?><!-- Nav -->
->>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
+<?php if ($_valid && !is_callable('content_56539a3dd06f28_15781847')) {function content_56539a3dd06f28_15781847($_smarty_tpl) {?><!-- Nav -->
 <nav>
   <div class="navbar navbar-inverse">
     <div class="container">

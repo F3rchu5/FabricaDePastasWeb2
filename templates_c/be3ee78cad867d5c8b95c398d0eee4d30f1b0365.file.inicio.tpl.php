@@ -1,41 +1,25 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:14:49
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:59:53
          compiled from "templates\inicio.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1320956538fd91c6388-02138088%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 22:12:33
-         compiled from "templates\inicio.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:137705653814173f9b1-20958834%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
+<?php /*%%SmartyHeaderCode:683056539a69740656-58871752%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'be3ee78cad867d5c8b95c398d0eee4d30f1b0365' => 
     array (
       0 => 'templates\\inicio.tpl',
-      1 => 1442951695,
+      1 => 1446218639,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '1320956538fd91c6388-02138088',
-=======
-  'nocache_hash' => '137705653814173f9b1-20958834',
->>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
+  'nocache_hash' => '683056539a69740656-58871752',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-<<<<<<< HEAD
-  'unifunc' => 'content_56538fd929c1d8_34773861',
+  'unifunc' => 'content_56539a69790e11_38426952',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56538fd929c1d8_34773861')) {function content_56538fd929c1d8_34773861($_smarty_tpl) {?><section>
-=======
-  'unifunc' => 'content_565381417a8c63_91679335',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_565381417a8c63_91679335')) {function content_565381417a8c63_91679335($_smarty_tpl) {?><section>
->>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
+<?php if ($_valid && !is_callable('content_56539a69790e11_38426952')) {function content_56539a69790e11_38426952($_smarty_tpl) {?><section>
   <div class="container">
     <div class="fluid_container">
       <div class="row">
