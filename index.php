@@ -40,8 +40,8 @@
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD:
-        $indexController = new IndexController();
-        echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
+        $controlador = new LoginController();
+        echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
         $controlador = new categoriaController();

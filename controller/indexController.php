@@ -11,9 +11,6 @@
 
     }
 
-
-
-
     public function MostrasIndex()
     {
       $this->view->mostrarIndex();
