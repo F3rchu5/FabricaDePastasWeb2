@@ -1,8 +1,10 @@
 <?php
 
+  include_once 'controller/controller.php';
+
   class IndexController extends Controller
   {
-    
+
     function __construct()
     {
       $this->view = new indexView();

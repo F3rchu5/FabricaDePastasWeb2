@@ -33,8 +33,15 @@
       }
     }
 
-    public function agregarProducto($producto,$precio,$categoria){
+    private function subirArchivos($archivos){
+      $destino = 'images/uploaded/' . uniqid() . $archivos['name'][0];
+      move_uploaded_file($archivos['tmp_name'][0], $destino);
+      return $destino;
+    }
+
+    public function agregarProducto($producto,$precio,$categoria,$img){
       $id_cat = $this->buscarId($categoria);
+      $ruta = $this->subirArchivos($img);
       $consulta = $this->db->prepare('INSERT INTO fabrica.producto(nombre, precio, id_categoria) VALUES (?,?,?)');
       $consulta->execute(array($producto,$precio,$id_cat));
     }

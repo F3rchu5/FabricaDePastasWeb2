@@ -40,8 +40,8 @@
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
-        $indexController = new IndexController();
-        $indexController->agregarCategoria();
+        $controlador = new categoriaController();
+        $controlador->agregarCategoria();
         break;
       case ConfigApp::$ACTION_CRUD_BORRAR_CATEGORIA:
         $indexController = new IndexController();

@@ -89,6 +89,10 @@
             {/foreach}
           </select>
         </div>
+        <div class="form-group">
+          <label for="imagesToUpload">Imagenes</label>
+          <input type="file" name="imagesToUpload[]" id="imagesToUpload" multiple/>
+        </div>
         <button type="submit" class="btn btn-default" id="agregarProducto">Agregar Producto</button>
       </form>
     </div>

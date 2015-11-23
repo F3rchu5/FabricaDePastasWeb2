@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 17:43:00
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 21:21:21
          compiled from "templates\crud.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13062565342140358f9-92436539%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1532565370dbba0a21-60477915%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b5793d885a6f3b8a75d0457d40727e049d9adb57' => 
     array (
       0 => 'templates\\crud.tpl',
-      1 => 1446218639,
+      1 => 1448310075,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13062565342140358f9-92436539',
+  'nocache_hash' => '1532565370dbba0a21-60477915',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_565370dbc29dc7_76746502',
   'variables' => 
   array (
     'categorias' => 0,
@@ -25,10 +27,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'producto' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_565342140c2c29_84841010',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_565342140c2c29_84841010')) {function content_565342140c2c29_84841010($_smarty_tpl) {?><div class="container">
+<?php if ($_valid && !is_callable('content_565370dbc29dc7_76746502')) {function content_565370dbc29dc7_76746502($_smarty_tpl) {?><div class="container">
 
   <div class="page-header">
     <h1>Administrador</h1>
@@ -147,6 +147,10 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
 </option>
             <?php } ?>
           </select>
+        </div>
+        <div class="form-group">
+          <label for="imagesToUpload">Imagenes</label>
+          <input type="file" name="imagesToUpload[]" id="imagesToUpload" multiple/>
         </div>
         <button type="submit" class="btn btn-default" id="agregarProducto">Agregar Producto</button>
       </form>
