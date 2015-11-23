@@ -2,7 +2,7 @@
 
   include_once "model/model.php";
 
-  class productoModel
+  class ProductoModel
   {
 
     private $producto;

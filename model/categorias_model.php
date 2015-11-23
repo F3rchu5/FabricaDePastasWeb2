@@ -2,7 +2,7 @@
 
   include_once "model/model.php";
 
-  class categoriaModel extends Model
+  class CategoriaModel extends Model
   {
 
     private $categoria;

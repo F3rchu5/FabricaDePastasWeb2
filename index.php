@@ -5,7 +5,7 @@
   include_once 'controller/productos_controller.php';
   include_once 'controller/controller.php';
   include_once 'controller/indexController.php';
-  include_once 'controller/loging_Controller.php';
+  include_once 'controller/login_Controller.php';
 
   if(!array_key_exists(ConfigApp::$ACTION, $_REQUEST) || $_REQUEST[ConfigApp::$ACTION] == ConfigApp::$ACTION_DEFAULT)
   {
@@ -54,6 +54,14 @@
       case ConfigApp::$ACTION_CRUD_BORRAR_PRODUCTO:
         $indexController = new IndexController();
         $indexController->borrarProducto();
+        break;
+      case ConfigApp::$ACTION_LOGIN:
+        $indexController = new LoginController();
+        $indexController->login();
+        break;
+      case ConfigApp::$ACTION_LOGOUT:
+        $indexController = new LoginController();
+        $indexController->logout();
         break;
       default:
         echo 'Pagina no encontrada';
