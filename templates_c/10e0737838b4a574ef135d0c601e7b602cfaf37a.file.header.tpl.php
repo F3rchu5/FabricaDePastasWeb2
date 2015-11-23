@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 21:02:32
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 22:12:20
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7751565370d8be50f4-40591311%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 21:57:10
-         compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2378956537da648a425-89044487%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 0c98009b2334282ea366e453c51dfd805702cb98
+<?php /*%%SmartyHeaderCode:32569565381349fc556-13577000%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -17,25 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '7751565370d8be50f4-40591311',
-=======
-  'nocache_hash' => '2378956537da648a425-89044487',
->>>>>>> 0c98009b2334282ea366e453c51dfd805702cb98
+  'nocache_hash' => '32569565381349fc556-13577000',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-<<<<<<< HEAD
-  'unifunc' => 'content_565370d8be6db3_77339956',
+  'unifunc' => 'content_56538134a47c82_02912802',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_565370d8be6db3_77339956')) {function content_565370d8be6db3_77339956($_smarty_tpl) {?><!-- Header -->
-=======
-  'unifunc' => 'content_56537da648e440_47188155',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56537da648e440_47188155')) {function content_56537da648e440_47188155($_smarty_tpl) {?><!-- Header -->
->>>>>>> 0c98009b2334282ea366e453c51dfd805702cb98
+<?php if ($_valid && !is_callable('content_56538134a47c82_02912802')) {function content_56538134a47c82_02912802($_smarty_tpl) {?><!-- Header -->
 <header class="jumbotron img-responsive">
   <div class="container">
     <div class="fluid_container">

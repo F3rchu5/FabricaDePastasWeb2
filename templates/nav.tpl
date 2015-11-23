@@ -20,7 +20,7 @@
           <li id="productos"><a>Productos</a></li>
           <li id="pedido"><a>Realiza Tu Pedido</a></li>
           <li id="contacto"><a>Contacto</a></li>
-          <li id="crud"><a>Administrador</a></li>
+          <li id="login"><a>Administrador</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->

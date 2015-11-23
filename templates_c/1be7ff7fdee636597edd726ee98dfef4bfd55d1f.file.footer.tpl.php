@@ -1,41 +1,25 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 21:02:32
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:48:00
          compiled from ".\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13330565370d8cc4947-69335127%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 21:57:10
-         compiled from ".\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2648056537da64edb79-47968310%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 0c98009b2334282ea366e453c51dfd805702cb98
+<?php /*%%SmartyHeaderCode:3050856538134c2b675-05999255%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1be7ff7fdee636597edd726ee98dfef4bfd55d1f' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1447799875,
+      1 => 1448318877,
       2 => 'file',
     ),
   ),
-<<<<<<< HEAD
-  'nocache_hash' => '13330565370d8cc4947-69335127',
-=======
-  'nocache_hash' => '2648056537da64edb79-47968310',
->>>>>>> 0c98009b2334282ea366e453c51dfd805702cb98
+  'nocache_hash' => '3050856538134c2b675-05999255',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-<<<<<<< HEAD
-  'unifunc' => 'content_565370d8cc7208_37728695',
+  'unifunc' => 'content_56538134c69f06_27610581',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_565370d8cc7208_37728695')) {function content_565370d8cc7208_37728695($_smarty_tpl) {?>    <!-- Footer -->
-=======
-  'unifunc' => 'content_56537da6535bd6_59001041',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56537da6535bd6_59001041')) {function content_56537da6535bd6_59001041($_smarty_tpl) {?>    <!-- Footer -->
->>>>>>> 0c98009b2334282ea366e453c51dfd805702cb98
+<?php if ($_valid && !is_callable('content_56538134c69f06_27610581')) {function content_56538134c69f06_27610581($_smarty_tpl) {?>    <!-- Footer -->
     <footer id="footer">
       <div class="container">
         <div class="social text-center">
@@ -57,7 +41,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <a id="productos">Productos</a>|
                   <a id="pedido">Realiza Tu Pedido</a>|
                   <a id="contacto">Contacto</a>|
-                  <a id="crud">Administrador</a>
+                  <a id="login">Administrador</a>
                 </p>
               </div>
             </div>
