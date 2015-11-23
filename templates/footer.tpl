@@ -20,7 +20,7 @@
                   <a id="productos">Productos</a>|
                   <a id="pedido">Realiza Tu Pedido</a>|
                   <a id="contacto">Contacto</a>|
-                  <a id="crud">Administrador</a>
+                  <a id="login">Administrador</a>
                 </p>
               </div>
             </div>

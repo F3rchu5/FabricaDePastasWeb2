@@ -1,17 +1,31 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:15:32
          compiled from "templates\crud.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1733956539004708ba1-39203786%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-23 23:17:23
+         compiled from "templates\crud.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2215656539073dd38e5-15556321%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b5793d885a6f3b8a75d0457d40727e049d9adb57' => 
     array (
       0 => 'templates\\crud.tpl',
+<<<<<<< HEAD
       1 => 1446218639,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1733956539004708ba1-39203786',
+=======
+      1 => 1448310075,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2215656539073dd38e5-15556321',
+>>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
   'function' => 
   array (
   ),
@@ -26,9 +40,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
+<<<<<<< HEAD
   'unifunc' => 'content_565390047df138_30577862',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_565390047df138_30577862')) {function content_565390047df138_30577862($_smarty_tpl) {?><div class="container">
+=======
+  'unifunc' => 'content_56539074051179_67099955',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_56539074051179_67099955')) {function content_56539074051179_67099955($_smarty_tpl) {?><div class="container">
+>>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
 
   <div class="page-header">
     <h1>Administrador</h1>
@@ -148,6 +168,13 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
             <?php } ?>
           </select>
         </div>
+<<<<<<< HEAD
+=======
+        <div class="form-group">
+          <label for="imagesToUpload">Imagenes</label>
+          <input type="file" name="imagesToUpload[]" id="imagesToUpload" multiple/>
+        </div>
+>>>>>>> d3574cbe8597aa6f1720f517d5dea11d0ad98efa
         <button type="submit" class="btn btn-default" id="agregarProducto">Agregar Producto</button>
       </form>
     </div>

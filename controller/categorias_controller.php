@@ -8,8 +8,13 @@
 
     function __construct()
     {
-      $this->view = new categoriaView();
+      $this->view = new categoriasView();
       $this->model = new categoriaModel();
+    }
+
+    public function MostrasIndex()
+    {
+      $this->view->mostrarIndex();
     }
 
     function RetornarContenido($contenido)

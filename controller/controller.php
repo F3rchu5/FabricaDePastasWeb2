@@ -1,5 +1,11 @@
 <?php
-include_once 'view/index_view.php';
+
+  include_once 'view/view.php';
+  include_once 'view/index_view.php';
+  include_once 'view/categorias_view.php';
+  include_once 'view/productos__view.php';
+  include_once 'view/login_view.php';
+
   class Controller
   {
 

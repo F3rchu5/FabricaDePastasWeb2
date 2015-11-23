@@ -35,13 +35,17 @@
         $indexController = new IndexController();
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
+      case ConfigApp::$ACTION_LOGIN:
+        $indexController = new IndexController();
+        echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
+        break;
       case ConfigApp::$ACTION_CRUD:
         $indexController = new IndexController();
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
-        $indexController = new IndexController();
-        $indexController->agregarCategoria();
+        $controlador = new categoriaController();
+        $controlador->agregarCategoria();
         break;
       case ConfigApp::$ACTION_CRUD_BORRAR_CATEGORIA:
         $indexController = new IndexController();
@@ -54,10 +58,6 @@
       case ConfigApp::$ACTION_CRUD_BORRAR_PRODUCTO:
         $indexController = new IndexController();
         $indexController->borrarProducto();
-        break;
-      case ConfigApp::$ACTION_LOGIN:
-        $indexController = new LoginController();
-        $indexController->login();
         break;
       case ConfigApp::$ACTION_LOGOUT:
         $indexController = new LoginController();

@@ -4,6 +4,11 @@
   class categoriasView extends view
   {
 
+      function mostrarIndex(){
+        $this->smarty->assign('errores', $this->errores);
+        $this->smarty->display('index.tpl');
+      }
+
       public function mostrarTPL($contenido,$categoria)
       {
         $this->smarty->assign('errores', $this->errores);

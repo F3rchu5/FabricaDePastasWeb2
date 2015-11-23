@@ -1,5 +1,7 @@
 <?php
 
+  include_once 'controller/controller.php';
+
   class IndexController extends Controller
   {
 
