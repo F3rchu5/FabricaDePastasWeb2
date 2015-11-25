@@ -11,9 +11,9 @@
 //   html+='<a class="glyphicon glyphicon-ok" href="index.php?action=realizar_tarea&id_task=' + tarea.id + '"></a>';
 //   return  html;
 // }
-/*
+
 function crearProductoHTML(producto) {
-  $.ajax({ url: 'js/templates/tarea.mst',
+  $.ajax({ url: 'js/templates/productos.mst',
      success: function(template) {
        var rendered = Mustache.render(template,tarea);
        $('#listaTareas').append(rendered);

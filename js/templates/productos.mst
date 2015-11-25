@@ -1,0 +1,7 @@
+<li id="tarea{{id}}" class="list-group-item">
+  {{#realizada}}<s>{{/realizada}}
+  <span>{{tarea}}</span>
+  {{#realizada}}</s>{{/realizada}}
+  <a class="glyphicon glyphicon-trash borrar" idtarea='{{id}}' ></a>
+  <a class="glyphicon glyphicon-ok realizada" idtarea="{{id}}"></a>
+</li>
