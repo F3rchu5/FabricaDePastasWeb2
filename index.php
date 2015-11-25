@@ -47,18 +47,19 @@
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
         $controlador = new crudController();
         $controlador->agregarCategoria();
+        echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD_BORRAR_CATEGORIA:
-        $indexController = new IndexController();
-        $indexController->borrarCategoria();
+        $controlador = new crudController();
+        echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD_AGREGAR_PRODUCTO:
-        $indexController = new IndexController();
-        $indexController->agregarProducto();
+        $controlador = new crudController();
+        echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD_BORRAR_PRODUCTO:
-        $indexController = new IndexController();
-        $indexController->borrarProducto();
+        $controlador = new crudController();
+        echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_LOGOUT:
         $indexController = new LoginController();

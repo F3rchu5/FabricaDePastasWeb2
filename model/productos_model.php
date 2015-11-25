@@ -17,6 +17,7 @@
         $productos[$id]['nombre'] = $producto['nombre'];
         $productos[$id]['precio'] = $producto['precio'];
         $productos[$id]['id_categoria'] = $producto['id_categoria'];
+        $productos[$id]['imagen'] = $producto['imagen'];
         $id++;
       }
       return $productos;
@@ -42,8 +43,8 @@
     public function agregarProducto($producto,$precio,$categoria,$img){
       $id_cat = $this->buscarId($categoria);
       $ruta = $this->subirArchivos($img);
-      $consulta = $this->db->prepare('INSERT INTO fabrica.producto(nombre, precio, id_categoria) VALUES (?,?,?)');
-      $consulta->execute(array($producto,$precio,$id_cat));
+      $consulta = $this->db->prepare('INSERT INTO fabrica.producto(nombre, precio, id_categoria, imagen) VALUES (?,?,?,?)');
+      $consulta->execute(array($producto,$precio,$id_cat,$ruta));
     }
 
     public function borrarProducto($id_producto){

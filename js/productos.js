@@ -1,22 +1,9 @@
-
-// function crearTareaHTML(tarea) {
-//   var html = '<li class="list-group-item">';
-//   if(tarea.realizada){
-//     html +='<s>'+ tarea.tarea +'</s>';
-//   }
-//   else{
-//     html += tarea.tarea;
-//   }
-//   html+='<a class="glyphicon glyphicon-trash" href="index.php?action=borrar_tarea&id_task=' + tarea.id + '"></a>';
-//   html+='<a class="glyphicon glyphicon-ok" href="index.php?action=realizar_tarea&id_task=' + tarea.id + '"></a>';
-//   return  html;
-// }
-
+//------------------PRODUCTOS-----------------------//
 function crearProductoHTML(producto) {
   $.ajax({ url: 'js/templates/productos.mst',
      success: function(template) {
        var rendered = Mustache.render(template,producto);
-       $('#listaProducto').append(rendered);
+       $('#listaProductos').append(rendered);
       }
     });
 }
@@ -31,14 +18,14 @@ function fixRealizada(producto){
 }
 
 
-function creaProductos(){
+function crearProductos(){
   $.ajax({
     method: 'GET',
     url:'api/fabrica',
     datatype: 'JSON',
     success: function(productos){
       $('#listaProductos').html('');
-      tareas.forEach(function(producto){
+      productos.forEach(function(producto){
          var html = crearProductoHTML(fixRealizada(producto));
         $('#listaProductos').append(html);
       });
@@ -53,7 +40,7 @@ function creaProductos(){
 function agregarProducto(producto){
   $.ajax({
     method: 'POST',
-    url:'api/producto',
+    url:'api/fabrica',
     datatype: 'JSON',
     data: producto,
     success: function(idProducto){
@@ -70,13 +57,13 @@ function agregarProducto(producto){
 function borrarProducto(idproducto){
   $.ajax({
     method: 'DELETE',
-    url:'api/producto/' + idproducto,
+    url:'api/fabrica/' + idproducto,
     datatype: 'JSON',
     success: function(){
       $('#producto'+idproducto).remove();
     },
     error: function () {
-      alert('Error');
+      alert('Imposible borrar producto.');
     }
   });
 }
@@ -84,7 +71,7 @@ function borrarProducto(idproducto){
 function realizarProducto(idproducto){
   $.ajax({
     method: 'PUT',
-    url:'api/producto/' + idproducto,
+    url:'api/fabrica/' + idproducto,
     datatype: 'JSON',
     success: function(){
       $('#producto' + idproducto +' span').wrap('<s>');
@@ -98,24 +85,22 @@ function realizarProducto(idproducto){
 
 $('body').on('click','a.borrar', function(event){
   event.preventDefault();
-  borrarTarea(this.getAttribute('idproducto'));
+  borrarProducto(this.getAttribute('idproducto'));
 });
 
 $('body').on('click','a.realizada', function(event){
   event.preventDefault();
-  realizarTarea(this.getAttribute('idproducto'));
+  realizarProducto(this.getAttribute('idproducto'));
 });
 $(document).ready(function(){
   $('#refresh').on('click', function(event){
     event.preventDefault();
-    crearTareas();
+    crearProductos();
   });
   $('#agregarProducto').on('click', function(event){
     event.preventDefault();
-    var tarea= {
-      tarea:$('#product').val()
-    };
-    $('#product').val('');
+    var producto= {producto:$('#product').val()}+','+{precio: $('#price').val()}+','+{categoria:$('#category').val()}+','+
+      {imagen:$('#imagesToUpload').val()};
     agregarProducto(producto);
   });
 
