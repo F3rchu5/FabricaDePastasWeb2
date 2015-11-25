@@ -7,7 +7,7 @@
 
     function __construct()
     {
-      $this->view = new productoView();
+      $this->view = new productosView();
       $this->model = new productoModel();
     }
 

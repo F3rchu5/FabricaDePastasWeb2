@@ -7,7 +7,7 @@
       public function mostrarTPL($contenido,$producto)
       {
         $this->smarty->assign('errores', $this->errores);
-        $this->smarty->assign('categorias', $categoria);
+        $this->smarty->assign('productos', $producto);
         return $this->smarty->fetch($contenido);
       }
 

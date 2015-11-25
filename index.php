@@ -28,8 +28,8 @@
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_PEDIDO:
-        $indexController = new IndexController();
-        echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
+        $productoController = new productoController();
+        echo $productoController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CONTACTO:
         $indexController = new IndexController();
