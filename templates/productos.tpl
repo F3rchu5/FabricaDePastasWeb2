@@ -14,7 +14,9 @@
                <li>{$categoria['nombre']}</li>
                 <ul>
                   {foreach $productos as $producto}
-                    <li>{$producto['nombre']}</li>
+                    {if $producto['id_categoria'] == $categoria['id_categoria']}
+                      <li>{$producto['nombre']}</li>
+                    {/if}
                   {/foreach}
                 </ul>
              {/foreach}

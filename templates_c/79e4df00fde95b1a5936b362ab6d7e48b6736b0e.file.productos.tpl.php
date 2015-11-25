@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-11-25 20:28:56
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-26 00:28:05
          compiled from "templates\productos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1251656560bf84cf4e7-75551705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '79e4df00fde95b1a5936b362ab6d7e48b6736b0e' => 
     array (
       0 => 'templates\\productos.tpl',
-      1 => 1443731819,
+      1 => 1448494078,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_56560bf8513bc7_06406327',
   'variables' => 
   array (
     'categorias' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'producto' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_56560bf8513bc7_06406327',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_56560bf8513bc7_06406327')) {function content_56560bf8513bc7_06406327($_smarty_tpl) {?><section>
   <div class="container">
@@ -51,8 +51,10 @@ $_smarty_tpl->tpl_vars['categoria']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['producto']->key => $_smarty_tpl->tpl_vars['producto']->value){
 $_smarty_tpl->tpl_vars['producto']->_loop = true;
 ?>
-                    <li><?php echo $_smarty_tpl->tpl_vars['producto']->value['nombre'];?>
+                    <?php if ($_smarty_tpl->tpl_vars['producto']->value['id_categoria']==$_smarty_tpl->tpl_vars['categoria']->value['id_categoria']){?>
+                      <li><?php echo $_smarty_tpl->tpl_vars['producto']->value['nombre'];?>
 </li>
+                    <?php }?>
                   <?php } ?>
                 </ul>
              <?php } ?>
