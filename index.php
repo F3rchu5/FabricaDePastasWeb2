@@ -20,7 +20,7 @@
         echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_QUE_OFRECEMOS:
-        $categoriaController = new categoriaController();
+        $categoriaController = new CategoriaController();
         echo $categoriaController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_PRODUCTOS:
@@ -28,7 +28,7 @@
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_PEDIDO:
-        $productoController = new productoController();
+        $productoController = new ProductoController();
         echo $productoController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CONTACTO:
@@ -44,7 +44,7 @@
         echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
-        $controlador = new categoriaController();
+        $controlador = new CategoriaController();
         $controlador->agregarCategoria();
         break;
       case ConfigApp::$ACTION_CRUD_BORRAR_CATEGORIA:

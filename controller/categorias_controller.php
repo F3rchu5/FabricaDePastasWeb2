@@ -3,7 +3,7 @@
   include_once 'model/categorias_model.php';
   include_once 'controller/controller.php';
 
-  class categoriaController extends Controller
+  class CategoriaController extends Controller
   {
 
     function __construct()

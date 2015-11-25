@@ -1,7 +1,5 @@
-<li id="tarea{{id}}" class="list-group-item">
-  {{#realizada}}<s>{{/realizada}}
-  <span>{{tarea}}</span>
-  {{#realizada}}</s>{{/realizada}}
-  <a class="glyphicon glyphicon-trash borrar" idtarea='{{id}}' ></a>
-  <a class="glyphicon glyphicon-ok realizada" idtarea="{{id}}"></a>
+
+<li id="producto{{id_producto}}" class="list-group-item">
+<span>{{$producto['nombre']}}</span>
+  <a class="glyphicon glyphicon-trash" href="index.php?action=crud_borrar_producto&id_producto={$producto['id_producto']}"></a>
 </li>
