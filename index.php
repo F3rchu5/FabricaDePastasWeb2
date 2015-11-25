@@ -6,6 +6,7 @@
   include_once 'controller/controller.php';
   include_once 'controller/indexController.php';
   include_once 'controller/login_Controller.php';
+  include_once 'controller/crud_Controller.php';
 
   if(!array_key_exists(ConfigApp::$ACTION, $_REQUEST) || $_REQUEST[ConfigApp::$ACTION] == ConfigApp::$ACTION_DEFAULT)
   {
@@ -24,8 +25,8 @@
         echo $categoriaController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_PRODUCTOS:
-        $indexController = new IndexController();
-        echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
+        $productosController = new crudController();
+        echo $productosController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_PEDIDO:
         $productoController = new productoController();
@@ -44,7 +45,7 @@
         echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
-        $controlador = new categoriaController();
+        $controlador = new crudController();
         $controlador->agregarCategoria();
         break;
       case ConfigApp::$ACTION_CRUD_BORRAR_CATEGORIA:
