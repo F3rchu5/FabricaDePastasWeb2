@@ -46,6 +46,7 @@
         break;
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
         $controlador = new crudController();
+        $controlador->agregarCategoria();
         echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD_BORRAR_CATEGORIA:

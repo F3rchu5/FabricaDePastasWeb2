@@ -1,9 +1,9 @@
 <?php
 require_once 'api_base.php';
-require_once 'model/categorias_model.php';
-require_once 'model/productos_model.php';
-require_once 'model/usuarios_model.php';
-require_once 'model/model.php';
+require_once '..model/categorias_model.php';
+require_once '..model/productos_model.php';
+require_once '..model/usuarios_model.php';
+require_once '..model/model.php';
 
 class FabricaApi extends ApiBase {
   private $modelUsuarios;
@@ -22,13 +22,13 @@ class FabricaApi extends ApiBase {
   function producto(){
     switch ($this->method) {
       case 'GET':
-        return $this->modelProducto->getProductos();
+        return $this->modelProductos->getProductos();
         break;
       case 'DELETE':
         if(count($this->args) > 0) return $this->modelProductos->borrarProducto($this->args[0]);
         break;
       case 'POST':
-        if(isset($_POST['product'], $_POST['price'],$_POST['category'])) return $this->model->agregarProducto($_REQUEST['product'], $_REQUEST['price'],$_REQUEST['category']);
+        if(isset($_POST['product'], $_POST['price'],$_POST['category'],$_FILES['imagesToUpload'])) return $this->modelProducto->agregarProducto($_REQUEST['product'], $_REQUEST['price'],$_REQUEST['category'], $_FILES['imagesToUpload']);
         break;
       /*case 'PUT':
         if(count($this->args) > 0) return $this->model->realizarTarea($this->args[0]);

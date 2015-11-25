@@ -49,12 +49,8 @@
     <!--      Productos     -->
     <div class="col-xs-6">
       <label class="control-label" for="nombre">Productos</label>
-      <ul id=listaProductoclass="list-group">
-        {foreach $productos as $producto}
-          <li class="list-group-item">
-            {$producto['nombre']}
-            <a class="glyphicon glyphicon-trash" href="index.php?action=crud_borrar_producto&id_producto={$producto['id_producto']}"></a>
-        {/foreach}
+      <ul id=listaProductos class="list-group">
+
       </ul>
 
       {if count($errores) gt 0}
