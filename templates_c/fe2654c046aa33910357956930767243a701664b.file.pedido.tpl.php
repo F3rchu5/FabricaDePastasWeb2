@@ -1,4 +1,30 @@
-  <section>
+<?php /* Smarty version Smarty-3.1.14, created on 2015-11-25 15:56:22
+         compiled from "templates\pedido.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:314465655cae0860b88-22267557%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'fe2654c046aa33910357956930767243a701664b' => 
+    array (
+      0 => 'templates\\pedido.tpl',
+      1 => 1448463363,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '314465655cae0860b88-22267557',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5655cae0996d50_58123294',
+  'variables' => 
+  array (
+    'productos' => 0,
+    'producto' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5655cae0996d50_58123294')) {function content_5655cae0996d50_58123294($_smarty_tpl) {?>  <section>
     <div class="container">
       <div class="fluid_container">
         <div class="row">
@@ -13,12 +39,18 @@
                     </tr>
                   </thead>
                   <tbody id="contenidoTabla"><!--Contenido de la tabla-->
-                    {foreach $productos as $producto}
+                    <?php  $_smarty_tpl->tpl_vars['producto'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['producto']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['productos']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['producto']->key => $_smarty_tpl->tpl_vars['producto']->value){
+$_smarty_tpl->tpl_vars['producto']->_loop = true;
+?>
                       <tr>
-                        <td>{$producto['nombre']}</td>
-                        <td>{$producto['precio']}</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['nombre'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['precio'];?>
+</td>
                       </tr>
-                    {/foreach}
+                    <?php } ?>
                   </tbody>
                 </table>
              </div>
@@ -60,3 +92,4 @@
         </div>
       </div>
   </section>
+<?php }} ?>
