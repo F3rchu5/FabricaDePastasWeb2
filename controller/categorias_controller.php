@@ -12,11 +12,6 @@
       $this->model = new categoriaModel();
     }
 
-    public function MostrasIndex()
-    {
-      $this->view->mostrarIndex();
-    }
-
     function RetornarContenido($contenido)
     {
       $ruta = "templates/" . $contenido . ".tpl";

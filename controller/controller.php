@@ -14,13 +14,11 @@
 
     function checkSesion(){
     session_start();
-    if(!isset($_SESSION["email"])){
-      header("Location: index.php?action=login");
-      die();
+      if(!isset($_SESSION["email"])){
+        header("Location: index.php?action=login");
+        die();
+      }
     }
-  }
-
-
 
   }
 

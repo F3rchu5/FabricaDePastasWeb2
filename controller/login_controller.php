@@ -10,7 +10,6 @@
       $this->model = new UsuariosModel();
       $this->view = new LoginView();
       $this->checkSesion();
-
     }
 
     function logout(){
@@ -23,9 +22,9 @@
 
     function login(){
       if(isset($_REQUEST["txtEmail"]) && isset($_REQUEST["txtPassword"]))
-  {
-    $email = $_REQUEST["txtEmail"];
-    $pass = $_REQUEST["txtPassword"];
+      {
+        $email = $_REQUEST["txtEmail"];
+        $pass = $_REQUEST["txtPassword"];
 
         $usuario = $this->model->getUsuario($email);
 
@@ -40,7 +39,6 @@
           $this->view->mostrarError("Usuario y password invalidos");
         }
       }
-
       $this->mostrarIndex();
     }
 

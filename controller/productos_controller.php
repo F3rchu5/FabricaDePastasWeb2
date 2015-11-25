@@ -1,4 +1,5 @@
 <?php
+
   include_once 'model/productos_model.php';
   include_once 'controller/controller.php';
 
@@ -7,7 +8,7 @@
 
     function __construct()
     {
-      $this->view = new productoView();
+      $this->view = new productosView();
       $this->model = new productoModel();
     }
 

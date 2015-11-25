@@ -60,4 +60,3 @@
         </div>
       </div>
   </section>
-<script src="js/informacion.js"></script>
