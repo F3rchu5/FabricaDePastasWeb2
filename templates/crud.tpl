@@ -49,7 +49,7 @@
     <!--      Productos     -->
     <div class="col-xs-6">
       <label class="control-label" for="nombre">Productos</label>
-      <ul class="list-group">
+      <ul id=listaProductoclass="list-group">
         {foreach $productos as $producto}
           <li class="list-group-item">
             {$producto['nombre']}

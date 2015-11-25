@@ -15,34 +15,34 @@
 function crearProductoHTML(producto) {
   $.ajax({ url: 'js/templates/productos.mst',
      success: function(template) {
-       var rendered = Mustache.render(template,tarea);
-       $('#listaTareas').append(rendered);
+       var rendered = Mustache.render(template,producto);
+       $('#listaProducto').append(rendered);
       }
     });
 }
 
-function fixRealizada(tarea){
-  if(tarea.realizada == '1')
-    tarea.realizada = 1;
+function fixRealizada(producto){
+  if(producto.realizada == '1')
+    producto.realizada = 1;
   else
-    tarea.realizada = 0;
+    producto.realizada = 0;
 
-  return tarea;
+  return producto;
 }
 
 
-function crearProductos(){
+function creaProductos(){
   $.ajax({
     method: 'GET',
     url:'api/fabrica',
     datatype: 'JSON',
-    success: function(tareas){
-      $('#listaTareas').html('');
-      tareas.forEach(function(tarea){
-         var html = crearTareaHTML(fixRealizada(tarea));
-        $('#listaTareas').append(html);
+    success: function(productos){
+      $('#listaProductos').html('');
+      tareas.forEach(function(producto){
+         var html = crearProductoHTML(fixRealizada(producto));
+        $('#listaProductos').append(html);
       });
-      console.log(tareas);
+      console.log(producto);
     },
     error: function () {
       alert('Error');
@@ -50,16 +50,16 @@ function crearProductos(){
   });
 }
 
-function agregarTarea(tarea){
+function agregarProducto(producto){
   $.ajax({
     method: 'POST',
-    url:'api/tarea',
+    url:'api/producto',
     datatype: 'JSON',
-    data: tarea,
-    success: function(idTarea){
-      tarea.id=idTarea;
-      var html = crearTareaHTML(fixRealizada(tarea));
-      $('#listaTareas').append(html);
+    data: producto,
+    success: function(idProducto){
+      producto.id_producto=idProducto;
+      var html = crearProductoHTML(fixRealizada(producto));
+      $('#listaProductos').append(html);
     },
     error: function () {
       alert('Error');
@@ -67,13 +67,13 @@ function agregarTarea(tarea){
   });
 }
 
-function borrarTarea(idtarea){
+function borrarProducto(idproducto){
   $.ajax({
     method: 'DELETE',
-    url:'api/tarea/' + idtarea,
+    url:'api/producto/' + idproducto,
     datatype: 'JSON',
     success: function(){
-      $('#tarea'+idtarea).remove();
+      $('#producto'+idproducto).remove();
     },
     error: function () {
       alert('Error');
@@ -81,13 +81,13 @@ function borrarTarea(idtarea){
   });
 }
 
-function realizarTarea(idtarea){
+function realizarProducto(idproducto){
   $.ajax({
     method: 'PUT',
-    url:'api/tarea/' + idtarea,
+    url:'api/producto/' + idproducto,
     datatype: 'JSON',
     success: function(){
-      $('#tarea' + idtarea +' span').wrap('<s>');
+      $('#producto' + idproducto +' span').wrap('<s>');
     },
     error: function () {
       alert('Error');
@@ -98,29 +98,29 @@ function realizarTarea(idtarea){
 
 $('body').on('click','a.borrar', function(event){
   event.preventDefault();
-  borrarTarea(this.getAttribute('idtarea'));
+  borrarTarea(this.getAttribute('idproducto'));
 });
 
 $('body').on('click','a.realizada', function(event){
   event.preventDefault();
-  realizarTarea(this.getAttribute('idtarea'));
+  realizarTarea(this.getAttribute('idproducto'));
 });
 $(document).ready(function(){
   $('#refresh').on('click', function(event){
     event.preventDefault();
     crearTareas();
   });
-  $('#agregarTarea').on('click', function(event){
+  $('#agregarProducto').on('click', function(event){
     event.preventDefault();
     var tarea= {
-      tarea:$('#task').val()
+      tarea:$('#product').val()
     };
-    $('#task').val('');
-    agregarTarea(tarea);
+    $('#product').val('');
+    agregarProducto(producto);
   });
 
 
 
-  crearTareas();
+  crearProductos();
 
 });

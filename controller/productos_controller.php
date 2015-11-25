@@ -3,13 +3,13 @@
   include_once 'model/productos_model.php';
   include_once 'controller/controller.php';
 
-  class productoController extends Controller
+  class ProductoController extends Controller
   {
 
     function __construct()
     {
-      $this->view = new productosView();
-      $this->model = new productoModel();
+      $this->view = new ProductosView();
+      $this->model = new ProductoModel();
     }
 
     function RetornarContenido($contenido)

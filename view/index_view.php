@@ -6,9 +6,9 @@
   {
 
       function mostrarIndex(){
-      
+
         $this->smarty->assign('errores', $this->errores);
-        $this->smarty->display('index.tpl');
+        $this->smarty->display('crud.tpl');
       }
 
       public function mostrarTPL($contenido)
