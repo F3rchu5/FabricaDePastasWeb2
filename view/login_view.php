@@ -6,7 +6,7 @@ class LoginView extends View{
   function mostrarIndex(){
     $this->smarty->assign('email', $_SESSION["email"]);
     $this->smarty->assign('errores', $this->errores);
-    $this->smarty->display('crud.tpl');
+    $this->smarty->display('login.tpl');
   }
 
   public function mostrarTPL($contenido)

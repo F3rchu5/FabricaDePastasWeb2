@@ -1,5 +1,5 @@
 
-<li id="producto{{id_producto}}" class="list-group-item">
+<li id_producto="producto{{id_producto}}" class="list-group-item">
 <span>{{$producto['nombre']}}</span>
-  <a class="glyphicon glyphicon-trash" href="index.php?action=crud_borrar_producto&id_producto={$producto['id_producto']}"></a>
+  <a class="glyphicon glyphicon-trash borrar" href="index.php?action=crud_borrar_producto&id_producto={{$producto['id_producto']}}"></a>
 </li>

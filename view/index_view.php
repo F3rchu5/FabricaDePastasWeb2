@@ -6,7 +6,6 @@
   {
 
       function mostrarIndex(){
-
         $this->smarty->assign('errores', $this->errores);
         $this->smarty->display('index.tpl');
       }
