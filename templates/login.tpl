@@ -1,5 +1,5 @@
 
-  <form class="form-signin" method="POST" action="index.php?action=login">
+  <form class="form-signin">
     <h3 class="form-signin-heading">Acceder para continuar</h3>
     <label for="txtEmail" class="sr-only">Email</label>
     <input type="email" id="txtEmail" name="txtEmail" class="form-control" placeholder="Email" required autofocus>
