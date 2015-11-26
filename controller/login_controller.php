@@ -26,12 +26,14 @@
       if(isset($_REQUEST["txtEmail"]) && isset($_REQUEST["txtPassword"]))
       {
         $email = $_REQUEST["txtEmail"];
-        $pass = password_hash($_REQUEST["txtPassword"], PASSWORD_DEFAULT);
-        //$pass = $_REQUEST["txtPassword"];
+        //$pass = password_hash($_REQUEST["txtPassword"], PASSWORD_DEFAULT);
+        $pass = $_REQUEST["txtPassword"];
 
         $usuario = $this->model->getUsuario($email);
 
-        if(password_verify($pass, $usuario["password"]))
+        $hash = password_hash($usuario["password"], PASSWORD_DEFAULT);
+
+        if(password_verify($pass, $hash))
         {
           session_start();
           $_SESSION["email"] = $email;

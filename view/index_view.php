@@ -4,7 +4,10 @@
   class IndexView extends View
   {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3f754c98a4e9a060aa87109bce93ed3cb5637b34
       function mostrarIndex()
       {
         $this->smarty->assign('errores', $this->errores);
