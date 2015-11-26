@@ -1,6 +1,6 @@
 <?php
-require_once 'fabrica_api.php';
+  require_once 'fabrica_api.php';
 
-$fabricaAPI = new FabricaAPI($_REQUEST['parametros']);
-echo $fabricaAPI->processAPI();
+  $fabricaAPI = new FabricaAPI($_REQUEST['parametros']);
+  echo $fabricaAPI->processAPI();
 ?>

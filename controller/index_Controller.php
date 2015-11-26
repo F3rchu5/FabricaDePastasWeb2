@@ -7,7 +7,7 @@
 
     function __construct()
     {
-      $this->view = new indexView();
+      $this->view = new IndexView();
     }
 
     public function MostrasIndex()

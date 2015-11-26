@@ -4,9 +4,9 @@
   include_once 'controller/categorias_controller.php';
   include_once 'controller/productos_controller.php';
   include_once 'controller/controller.php';
-  include_once 'controller/indexController.php';
+  include_once 'controller/index_Controller.php';
   include_once 'controller/login_Controller.php';
-  include_once 'controller/crud_Controller.php';
+  include_once 'controller/cat-ped_Controller.php';
 
   if(!array_key_exists(ConfigApp::$ACTION, $_REQUEST) || $_REQUEST[ConfigApp::$ACTION] == ConfigApp::$ACTION_DEFAULT)
   {
@@ -21,15 +21,15 @@
         echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_QUE_OFRECEMOS:
-        $categoriaController = new CategoriaController();
+        $categoriaController = new CategoriasController();
         echo $categoriaController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_PRODUCTOS:
-        $productosController = new crudController();
+        $productosController = new CatPedController();
         echo $productosController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_PEDIDO:
-        $productoController = new ProductoController();
+        $productoController = new ProductosController();
         echo $productoController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CONTACTO:
@@ -37,12 +37,12 @@
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_LOGIN:
-        $indexController = new IndexController();
+        $indexController = new LoginController();
         echo $indexController->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
         break;
       case ConfigApp::$ACTION_CRUD:
         $controlador = new LoginController();
-        echo $controlador->RetornarContenido($_REQUEST[ConfigApp::$ACTION]);
+        $controlador->login();
         break;
       case ConfigApp::$ACTION_CRUD_AGREGAR_CATEGORIA:
         $controlador = new crudController();

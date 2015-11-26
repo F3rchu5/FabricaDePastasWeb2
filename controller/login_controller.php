@@ -5,13 +5,15 @@
   class LoginController extends Controller
   {
 
-    function __construct() {
+    function __construct()
+    {
       $this->model = new UsuariosModel();
       $this->view = new LoginView();
-      $this->checkSesion();
+      //$this->checkSesion();
     }
 
-    function logout(){
+    function logout()
+    {
       session_start();
       session_destroy();
       header("Location: index.php");
@@ -19,11 +21,13 @@
     }
 
 
-    function login(){
+    function login()
+    {
       if(isset($_REQUEST["txtEmail"]) && isset($_REQUEST["txtPassword"]))
       {
         $email = $_REQUEST["txtEmail"];
-        $pass = $_REQUEST["txtPassword"];
+        $pass = password_hash($_REQUEST["txtPassword"], PASSWORD_DEFAULT);
+        //$pass = $_REQUEST["txtPassword"];
 
         $usuario = $this->model->getUsuario($email);
 
@@ -38,7 +42,7 @@
           $this->view->mostrarError("Usuario y password invalidos");
         }
       }
-      $this->mostrarIndex();
+      $this->MostrasIndex();
     }
 
     public function MostrasIndex()
@@ -53,3 +57,5 @@
     }
 
   }
+
+?>
