@@ -6,9 +6,9 @@
 
     function getUsuario($email)
     {
-      $consulta = $this->db->prepare("SELECT * FROM usuario WHERE email = :email");
+      $consulta = $this->db->prepare("SELECT * FROM usuario WHERE email = ?");
       $consulta->execute(array($email));
-      return $consulta->fetch();
+      return $consulta->fetchAll();
     }
 
   }

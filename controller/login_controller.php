@@ -26,14 +26,11 @@
       if(isset($_REQUEST["txtEmail"]) && isset($_REQUEST["txtPassword"]))
       {
         $email = $_REQUEST["txtEmail"];
-        //$pass = password_hash($_REQUEST["txtPassword"], PASSWORD_DEFAULT);
         $pass = $_REQUEST["txtPassword"];
 
         $usuario = $this->model->getUsuario($email);
-
-        $hash = password_hash($usuario["password"], PASSWORD_DEFAULT);
-
-        if(password_verify($pass, $hash))
+        print_r($usuario);
+        if(password_verify($pass, $usuario["password"]))
         {
           session_start();
           $_SESSION["email"] = $email;
@@ -43,6 +40,9 @@
         else {
           $this->view->mostrarError("Usuario y password invalidos");
         }
+      }
+      else {
+        $this->view->mostrarError("Debe ingresar Usuario y Password validos");
       }
       $this->MostrasIndex();
     }
