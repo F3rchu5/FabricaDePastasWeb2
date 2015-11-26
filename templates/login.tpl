@@ -1,4 +1,5 @@
 
+<div class="container">
   <form class="form-signin">
     <h3 class="form-signin-heading">Acceder para continuar</h3>
     <label for="txtEmail" class="sr-only">Email</label>
@@ -16,3 +17,4 @@
     {/if}
     <button class="btn btn-lg btn-warning btn-block" type="submit">Acceder</button>
   </form>
+</div>
