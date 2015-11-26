@@ -15,6 +15,10 @@
         {/foreach}
       </div>
     {/if}
+<<<<<<< HEAD
     <button class="btn btn-lg btn-block" type="submit">Acceder</button>
+=======
+    <button  id="btnlogin"class="btn btn-lg btn-block" type="submit">Acceder</button>
+>>>>>>> 1a3e694f48819917caa0e121ccc5a43716c47142
   </form>
 </div>

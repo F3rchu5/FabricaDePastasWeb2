@@ -37,7 +37,7 @@
               <label>Consulta</label>
               <textarea class="form-control" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button id="btncontacto" type="submit" class="btn btn-lg btn-block">Enviar</button>
           </form>
         </div>
        </div>

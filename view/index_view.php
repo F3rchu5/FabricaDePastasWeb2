@@ -3,7 +3,6 @@
 
   class IndexView extends View
   {
-
       function mostrarIndex()
       {
         $this->smarty->assign('errores', $this->errores);
