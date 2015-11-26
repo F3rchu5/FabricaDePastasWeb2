@@ -2,12 +2,13 @@
 
   include_once "model/model.php";
 
-  class ProductoModel extends Model
+  class ProductosModel extends Model
   {
 
     private $producto;
 
-    public function getProductos(){
+    public function getProductos()
+    {
       $productos = array();
       $consulta = $this->db->prepare("SELECT * FROM producto");
       $consulta->execute();
@@ -34,20 +35,23 @@
       }
     }
 
-    private function subirArchivos($archivos){
+    private function subirArchivos($archivos)
+    {
       $destino = 'images/uploaded/' . uniqid() . $archivos['name'][0];
       move_uploaded_file($archivos['tmp_name'][0], $destino);
       return $destino;
     }
 
-    public function agregarProducto($producto,$precio,$categoria,$img){
+    public function agregarProducto($producto,$precio,$categoria,$img)
+    {
       $id_cat = $this->buscarId($categoria);
       $ruta = $this->subirArchivos($img);
       $consulta = $this->db->prepare('INSERT INTO fabrica.producto(nombre, precio, id_categoria, imagen) VALUES (?,?,?,?)');
       $consulta->execute(array($producto,$precio,$id_cat,$ruta));
     }
 
-    public function borrarProducto($id_producto){
+    public function borrarProducto($id_producto)
+    {
       $consulta = $this->db->prepare('DELETE FROM producto WHERE id_producto=?');
       $consulta->execute(array($id_producto));
     }

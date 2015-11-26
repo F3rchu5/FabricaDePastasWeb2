@@ -4,14 +4,14 @@
   include_once 'model/productos_model.php';
   include_once 'controller/controller.php';
 
-  class crudController extends Controller
+  class CatPedController extends Controller
   {
 
     function __construct()
     {
-      $this->view = new crudView();
-      $this->model = new categoriaModel();
-      $this->modelp = new ProductoModel();
+      $this->view = new CatPedView();
+      $this->model = new CategoriasModel();
+      $this->modelp = new ProductosModel();
     }
 
     function RetornarContenido($contenido)

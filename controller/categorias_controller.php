@@ -3,13 +3,13 @@
   include_once 'model/categorias_model.php';
   include_once 'controller/controller.php';
 
-  class CategoriaController extends Controller
+  class CategoriasController extends Controller
   {
 
     function __construct()
     {
-      $this->view = new categoriasView();
-      $this->model = new categoriaModel();
+      $this->view = new CategoriasView();
+      $this->model = new CategoriasModel();
     }
 
     function RetornarContenido($contenido)

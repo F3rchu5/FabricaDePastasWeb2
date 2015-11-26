@@ -1,12 +1,11 @@
 <?php
   include_once 'view/view.php';
 
-
-  class indexView extends view
+  class IndexView extends View
   {
 
-      function mostrarIndex(){
-
+      function mostrarIndex()
+      {
         $this->smarty->assign('errores', $this->errores);
         $this->smarty->display('index.tpl');
       }
