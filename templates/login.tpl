@@ -15,6 +15,6 @@
         {/foreach}
       </div>
     {/if}
-    <button class="btn btn-lg btn-warning btn-block" type="submit">Acceder</button>
+    <button  id="btnlogin"class="btn btn-lg btn-block" type="submit">Acceder</button>
   </form>
 </div>
