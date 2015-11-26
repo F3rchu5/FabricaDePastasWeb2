@@ -9,7 +9,7 @@
     {
       $this->model = new UsuariosModel();
       $this->view = new LoginView();
-      $this->checkSesion();
+      //$this->checkSesion();
     }
 
     function logout()
